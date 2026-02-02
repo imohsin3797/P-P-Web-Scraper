@@ -1,0 +1,23 @@
+# Core
+requests==2.32.3
+beautifulsoup4==4.12.3
+urllib3==2.2.2
+PyYAML==6.0.2
+python-dotenv==1.0.1
+
+# OpenAI SDK (pinned to work with httpx 0.27.x)
+openai==1.40.3
+httpx==0.27.2
+
+# Google Sheets (OAuth user flow)
+gspread==6.1.4
+google-auth==2.34.0
+google-auth-oauthlib==1.2.0
+
+# JS-rendered page support (names only)
+playwright==1.47.0
+
+# Website resolution by search + scoring (Google CSE path)
+tldextract==5.1.2
+rapidfuzz==3.9.6
+backoff==2.2.1

@@ -1,0 +1,72 @@
+search_thesis:
+  summary: |
+    We acquire U.S.-based SMBs with $5–50M revenue and $1–4M EBITDA/cash flow.
+    Priority: B2B, recurring revenue, low customer concentration, defensible niches.
+    Consider adjacent opportunities only if clearly commercial (own site, services/products pages)
+    and plausibly within SMB scale; otherwise exclude.
+  positive_signals:
+    - B2B services with contractual or recurring revenue
+    - Software or tech-enabled services that are mission-critical
+    - Compliance-driven services (safety, testing, regulated)
+    - Maintenance/aftermarket/service revenue in durable niches
+    - Low cyclicality and diversified customer base
+    - Professional services or light manufacturing with defensible niches
+  negative_signals:
+    - Associations, trade groups, conferences/events, or government programs without clear fee-for-service business lines
+    - Venture-style/pre-revenue, or consumer-only trends without defensibility
+    - Highly cyclical or seasonal businesses (unless clearly countercyclical)
+    - Heavy CapEx/low-margin industries
+    - Restaurants, retail boutiques, fast fashion
+    - Real estate brokerages, construction-only GCs without recurring contracts
+    - Crypto, adult content, gambling
+
+scrapers:
+  uspaacc:
+    url: "https://uspaacc.com/members/pan-asian-small-business-members#"
+    max_listings: 2000
+
+  aacc:
+    url: "https://www.asian-americanchamber.org/membership-directory/corporate"
+    max_listings: 2000
+
+  aaccil:
+    url: "https://aaccil.org/business-directory/"
+    max_listings: 2000
+    # this scraper ignores name_selector/container_ancestors; included for compatibility
+    name_selector: ""
+    container_ancestors: 0
+
+    # --- Site-specific hints (used by Playwright name scraper) ---
+    name_selector: "p.font-semibold.text-gray-700.mt-2.leading-snug"
+    container_ancestors: 4
+    external_link_keywords: ["website", "visit", "company site"]
+    profile_link_keywords: ["member", "company", "profile"]
+    name_stopwords:
+      - subscribe
+      - members
+      - member
+      - conference
+      - region
+      - regional
+      - partners
+      - government
+      - nonprofit
+      - navigator
+      - program
+      - corporate members
+      - nonprofit members
+      - government partners
+      - community
+      - join
+      - contact
+      - directions
+    blacklist_domains:
+      - uspaacc
+      - celebrasianconference
+      - innovationsym
+      - google.com/maps
+      - goo.gl/maps
+      - forms.gle
+      - hubspot
+      - eventbrite
+      - zoom.us

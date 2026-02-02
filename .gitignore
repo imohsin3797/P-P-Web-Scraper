@@ -1,0 +1,20 @@
+# Secrets and credentials
+.env
+token.json
+credentials/
+
+# Virtual environment
+.venv312/
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.so
+
+# Local/cache
+.search_cache.json
+.DS_Store
